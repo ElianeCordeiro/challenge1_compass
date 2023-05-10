@@ -30,24 +30,21 @@ public class RunEmployeeBonus {
 			salaries[i] = employeeSalary;
 		}
 		
-		for (double salary : salaries) {
-			for (String name : names) {
-				employeeBonusDiscount = new EmployeeBonusDiscount(name, salary);
+		for (int i = 0; i < names.length; i++) {
+				employeeBonusDiscount = new EmployeeBonusDiscount(names[i], salaries[i]);
+				System.out.println("");
 				
-				if(salary <= 2000) {
-					System.out.print("Employee: " + name + "\nSalary: R$" + salary +
-							"\n Bonus: R$"+ employeeBonusDiscount.calculateBonus()+
-							"Liquid salary: R$");
-							double liquidSalary  = employeeBonusDiscount.calculateBonus() + salary;
+				if(salaries[i] <= 2000) {
+					System.out.print(employeeBonusDiscount.toString() + "\nBonus: R$ " + employeeBonusDiscount.calculateBonus()+
+							"\nLiquid salary: R$ ");
+							double liquidSalary  = employeeBonusDiscount.calculateBonus() + salaries[i];
 							System.out.println(liquidSalary);
 				}
-				else if (salary > 2000) {
-					System.out.print("Employee: " + name + "\nSalary: R$" + salary +
-							"\n Bonus: R$"+ employeeBonusDiscount.calculateDiscount()+
-							"Liquid salary: R$");
-							double liquidSalary  = salary - employeeBonusDiscount.calculateDiscount();
+				else if (salaries[i] > 2000) {
+					System.out.print(employeeBonusDiscount.toString() + "\nDiscount: R$ "+ employeeBonusDiscount.calculateDiscount()+
+							"\nLiquid salary: R$ ");
+							double liquidSalary  = salaries[i] - employeeBonusDiscount.calculateDiscount();
 							System.out.println(liquidSalary);
-				}
 			}
 		}
 		
