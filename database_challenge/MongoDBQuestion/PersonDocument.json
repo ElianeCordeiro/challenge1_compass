@@ -1,0 +1,19 @@
+{
+    "name": "Eliane",
+    "age": 21,
+    "phone": "999999999",
+    "height": "160",
+    "email": "eliane@gmail.com",
+    "cpf": "12345678990",
+    "birthday": "05/09/2001",
+    "address": {
+        "zipcode": "55234000",
+        "street": "NoSQL Avenue",
+        "complement": "Room 5",
+        "neighborhood": "Downtown",
+        "city": "Compass Town",
+        "state": "UOL",
+        "country": "Brazil"
+    }
+
+}
